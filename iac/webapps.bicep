@@ -22,8 +22,12 @@ resource webApplication 'Microsoft.Web/sites@2022-03-01' = {
           value: 'https://${apiApplication.properties.defaultHostName}/'
         }
         {
-          name: 'REACT_APP_API_URL'
+          name: 'REACT_APP_API_URL' //The endpoint URL of the Health Check tracking API
           value: 'https://${apiApplication.properties.defaultHostName}/'
+        }
+        {
+          name: 'REACT_APP_API_KEY' //The API key for accessing the Health Check tracking API
+          value: ''
         }
       ]
     }
