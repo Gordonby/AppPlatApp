@@ -21,6 +21,10 @@ resource webApplication 'Microsoft.Web/sites@2022-03-01' = {
           name: 'APIENDPOINT'
           value: 'https://${apiApplication.properties.defaultHostName}/'
         }
+        {
+          name: 'REACT_APP_API_URL'
+          value: 'https://${apiApplication.properties.defaultHostName}/'
+        }
       ]
     }
     serverFarmId: appServicePlan.id
