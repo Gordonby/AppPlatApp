@@ -43,6 +43,12 @@ resource apiApplication 'Microsoft.Web/sites@2022-03-01' =  {
           value: 'api'
         }
       ]
+      cors: {
+        allowedOrigins: [
+          '*'
+        ]
+        supportCredentials: false
+      }
     }
     serverFarmId: appServicePlan.id
   }
